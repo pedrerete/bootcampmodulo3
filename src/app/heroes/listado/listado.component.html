@@ -4,12 +4,14 @@
 <button (click)="sumar()">+1</button>
 <button (click)="borrarHeroe(contador)">Borrar</button>
 
-<div *ngIf="heroeBorrado">
+<div *ngIf="heroeBorrado; else noBorrar" >
     <h3>Heroe Borrado</h3>
     <span>{{heroeBorrado}} </span>
-
 </div>
 
+<ng-template #noBorrar>
+    <h3>Borra a un heroe</h3>
+</ng-template>
 
 
 <ul>
